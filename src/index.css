@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #ddc7ad;
+  --secondary-color: #8b7355;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.sidebar-tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-pane {
+  display: none;
+  padding: 20px;
+}
+
+.sidebar-pane.active {
+  display: block;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-menu {
+  max-width: 200px;
+  height: auto;
+}
+
+.version {
+  color: var(--secondary-color);
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.user-list,
+.allmarkers-list,
+.markers-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.user-list li,
+.allmarkers-list li,
+.markers-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cc {
+  margin-right: 10px;
+}
+
+.cl {
+  cursor: pointer;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+  transform: rotate(45deg);
+} 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Interactive Map Application for Kingdom Come: Deliverance",
   "author": "ahmetcanisik <can.isik.business@gmail.com> (https://ahmetcanisik.com)",
-  "main": "main.js",
+  "main": "dist/main.js",
   "license": "MIT",
   "keywords": [
     "kingdom come deliverance online",
@@ -22,8 +22,11 @@
   },
   "browserslist": [],
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "start": "bun run electron .",
+    "dev": "bun run --watch src/main.ts & bun run vite",
+    "build": "bun run tsc && bun run vite build && bun run electron-builder",
+    "build:renderer": "bun run vite build",
+    "watch": "bun run vite build --watch"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -32,11 +35,19 @@
     "leaflet.markercluster": "^1.5.3",
     "leaflet-hash": "^0.2.1",
     "leaflet-sidebar-v2": "^3.2.3",
-    "leaflet-fullscreen": "^1.0.2"
+    "leaflet-fullscreen": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "@vitejs/plugin-react": "^4.2.1"
   },
   "devDependencies": {
     "electron": "^35.2.1",
-    "electron-builder": "^26.0.12"
+    "electron-builder": "^26.0.12",
+    "vite": "^5.0.12",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3"
   },
   "build": {
     "productName": "Kingom Come Map",
