@@ -1,6 +1,6 @@
 {
   "name": "kingdomcomemap",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Interactive Map Application for Kingdom Come: Deliverance",
   "author": "ahmetcanisik <can.isik.business@gmail.com> (https://ahmetcanisik.com)",
   "main": "main.js",
@@ -26,8 +26,8 @@
     "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^30.0.9",
-    "electron-builder": "^24.13.3"
+    "electron": "^35.2.1",
+    "electron-builder": "^26.0.12"
   },
   "build": {
     "productName": "Kingom Come Map",
