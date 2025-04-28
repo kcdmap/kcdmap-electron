@@ -25,6 +25,15 @@
     "start": "electron .",
     "build": "electron-builder"
   },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "jquery": "^3.7.1",
+    "i18next": "^23.7.16",
+    "leaflet.markercluster": "^1.5.3",
+    "leaflet-hash": "^0.2.1",
+    "leaflet-sidebar-v2": "^3.2.3",
+    "leaflet-fullscreen": "^1.0.2"
+  },
   "devDependencies": {
     "electron": "^35.2.1",
     "electron-builder": "^26.0.12"

@@ -78,7 +78,10 @@ function createWindow() {
             nodeIntegration: false
         }
     });
+    
+    
     win.loadFile(path.join(__dirname, "index.html"));
+    //win.loadURL("https://kingdomcomemap.vercel.app");
 
     win.webContents.setWindowOpenHandler(({ url }) => {
       // Only allow https external links
@@ -104,7 +107,8 @@ app.whenReady().then(() => {
               Menus.AboutWindow();
             }
           },
-          { role: 'quit' }
+          { role: 'quit' },
+          { role: 'toggleDevTools' }
         ]
       }
     ]);
